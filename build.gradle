@@ -1,5 +1,5 @@
 plugins {
-	id "com.crystaelix.loom" version "1.13-SNAPSHOT"
+	id "com.crystaelix.loom" version "1.17-SNAPSHOT"
 	id "eclipse"
 	id "idea"
 	id "maven-publish"
@@ -139,10 +139,13 @@ publishMods {
 		projectId = curseforge_project_id
 		accessToken = providers.gradleProperty("curseforge.token")
 		minecraftVersions.add("1.16.5")
+		client = true
+		server = true
 	}
 	modrinth {
 		projectId = modrinth_project_id
 		accessToken = providers.gradleProperty("modrinth.token")
 		minecraftVersions.add("1.16.5")
+		environment = CLIENT_AND_SERVER
 	}
 }
